@@ -14,3 +14,8 @@ responses = []
 @app.route('/')
 def survey_welcome_page():
     return render_template('welcome.html', survey = satisfaction_survey)
+
+@app.route('/questions/<int:question_no>')
+def display_question(question_no):
+    print(f"i am inside questions/0")
+    return render_template('question.html', question = satisfaction_survey.questions[question_no])
