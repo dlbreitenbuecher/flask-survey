@@ -10,6 +10,9 @@ class Question:
         self.question = question
         self.choices = choices
         self.allow_text = allow_text
+    
+    def __repr__(self):
+        return f'<Question text = {self.question}, Choices = {self.choices}>'
 
 
 class Survey:
@@ -32,7 +35,7 @@ satisfaction_survey = Survey(
         Question("On average, how much do you spend a month on frisbees?",
                  ["Less than $10,000", "$10,000 or more"]),
         Question("Are you likely to shop here again?"),
-    ])
+    ])     
 
 personality_quiz = Survey(
     "Rithm Personality Test",
