@@ -7,6 +7,8 @@
 <h2>Instructions</h2>
 <p> {{ survey.instructions }}</p>
 
-<a href="http://localhost:5000/questions/0">Start survey</a>
+<form action="http://localhost:5000/questions/0" method="POST">
+    <button type="submit">Start Survey</button>
+</form>
 
 {% endblock %}

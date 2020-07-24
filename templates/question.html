@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% if get_flashed_messages() %}
+        {% for msg in get_flashed_messages() %}
+            <p>{{ msg }}</p>
+        {% endfor %}
+    {% endif %}
+
 <form action="/answers" method="POST">
     <label for="">{{question.question}}</label><br>
     <label><input type="radio" name="choice" value="Yes">{{question.choices[0]}}</label>
