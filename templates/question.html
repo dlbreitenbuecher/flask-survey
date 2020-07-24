@@ -3,8 +3,8 @@
 {% block content %}
 <form action="/answers" method="POST">
     <label for="">{{question.question}}</label><br>
-    <label><input type="radio" name="Yes" value="">{{question.choices[0]}}</label>
-    <label><input type="radio" name="No" value="">{{question.choices[1]}}</label><br>
+    <label><input type="radio" name="choice" value="Yes">{{question.choices[0]}}</label>
+    <label><input type="radio" name="choice" value='No'>{{question.choices[1]}}</label><br>
     <button>Submit Answer</button>
 </form>
 {% endblock %}
